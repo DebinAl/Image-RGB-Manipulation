@@ -2,12 +2,20 @@ from tkinter import *
 from tkinter import ttk
 from PIL import ImageTk, Image
 from tkinter import filedialog
+
+""" Necessary Variable """
+#var size
+imageSize = (150,250)
+#array data
+imageData = []
+#DICT VAR
+bukafoto, copyfoto, gambarRgb = dict(), dict(), dict()#biar foto ga ke garbage collected
    
 """  Necessary Function """    
 #FUNCTION BUKA FILE
 def buka():
     global imgInput
-    window.filename = filedialog.askopenfilename(initialdir="C:\Debin\Kuliah\.Tugas\Semester 3\Pengolahan Citra Digital - C", title="Select File", filetypes=(("png files", "*.png"),("all files", "*.*")))
+    window.filename = filedialog.askopenfilename(initialdir="./", title="Select File", filetypes=(("png files", "*.png"),("all files", "*.*")))
     alamatFile = window.filename
     
     #TEMPAT FOTO YANG DI UPLOAD
@@ -87,15 +95,6 @@ def restart():
     gambarRgb["image"] = ImageTk.PhotoImage(imageInput)
     labelRgb.configure(image=gambarRgb["image"])
     labelRgb.image = gambarRgb["image"]
-    
-    
-""" Necessary Variable """
-#var size
-imageSize = (150,250)
-#array data
-imageData = []
-#DICT VAR
-bukafoto, copyfoto, gambarRgb = dict(), dict(), dict()#biar foto ga ke garbage collected
 
 
 """ Start Tkinter Window """
