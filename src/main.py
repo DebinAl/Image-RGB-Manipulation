@@ -15,7 +15,7 @@ bukafoto, copyfoto, gambarRgb = dict(), dict(), dict()#biar foto ga ke garbage c
 #FUNCTION BUKA FILE
 def buka():
     global imgInput
-    window.filename = filedialog.askopenfilename(initialdir="./", title="Select File", filetypes=(("png files", "*.png"),("all files", "*.*")))
+    window.filename = filedialog.askopenfilename(initialdir="./", title="Select File", filetypes=(("image files", "*.png *.jpg *.jpeg"),("all files", "*.*")))
     alamatFile = window.filename
     
     #TEMPAT FOTO YANG DI UPLOAD
