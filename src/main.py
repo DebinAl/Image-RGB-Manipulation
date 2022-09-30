@@ -83,7 +83,6 @@ def my_update():
 
 #restart
 def restart():
-    print(type(imageData))
     imageInput = Image.new("RGB", imageSize) 
     bukafoto['image'] = ImageTk.PhotoImage(imageInput)
     labelInput.configure(image=bukafoto["image"])
