@@ -166,3 +166,5 @@ labelKosong1 = Label(window, text="                                    ")
 labelKosong1.grid(row=2, column=4,sticky=NSEW, padx=1)
 
 window.mainloop()
+
+#update 123
